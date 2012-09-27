@@ -19,8 +19,10 @@ Grab this quickstart codes and make it working for you!
     cd nexus
     git remote add nexus git@github.com:shekhargulati/nexus.git
     git pull -s recursive -X theirs nexus master
-    git push
 
+Next download the war from Sonatype website http://www.sonatype.org/downloads/nexus-2.1.2.war and copy into diy/tomcat/webapps directory and rename it to nexus.war
+
+Finally do git push and see nexus running on OpenShift.
 That's it, you can now checkout your nexus at:
 
     http://nexus-$yournamespace.rhcloud.com/nexus
