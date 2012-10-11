@@ -17,7 +17,7 @@ Get Nexus running
 Grab this quickstart codes and make it working for you!
 
     cd nexus
-    git remote add nexus git@github.com:shekhargulati/nexus.git
+    git remote add nexus git://github.com/shekhargulati/nexus.git
     git pull -s recursive -X theirs nexus master
     git push
 
