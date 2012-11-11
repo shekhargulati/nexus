@@ -3,3 +3,14 @@
 # build hook has been run but before the application has been started back
 # up again.  This script gets executed directly, so it could be python, php,
 # ruby, etc.
+set -x
+if [ -d $OPENSHIFT_DATA_DIR/tomcat ]
+then
+    exit 0
+else
+    cp -rf $OPENSHIFT_REPO_DIR/diy/tomcat $OPENSHIFT_DATA_DIR
+    cd $OPENSHIFT_DATA_DIR/tomcat
+    rm -rf logs
+    ln -s $OPENSHIFT_DIY_LOG_DIR logs
+    sed -ig 's/OPENSHIFT_APP_DNS/'$OPENSHIFT_APP_DNS'/' conf/server.xml
+fi
