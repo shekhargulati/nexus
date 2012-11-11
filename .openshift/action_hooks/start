@@ -5,6 +5,6 @@
 #nohup $OPENSHIFT_REPO_DIR/diy/testrubyserver.rb $OPENSHIFT_INTERNAL_IP $OPENSHIFT_REPO_DIR/diy > $OPENSHIFT_LOG_DIR/server.log 2>&1 &
 set -x
 export PLEXUS_NEXUS_WORK=$OPENSHIFT_DATA_DIR
-cd $OPENSHIFT_RUNTIME_DIR/tomcat
+cd $OPENSHIFT_DATA_DIR/tomcat
 sed -ig 's/OPENSHIFT_INTERNAL_IP/'$OPENSHIFT_INTERNAL_IP'/g' conf/server.xml
 bin/startup.sh
