@@ -2,4 +2,6 @@
 # The logic to stop your application should be put in this script.
 #kill `ps -ef | grep testrubyserver.rb | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
 #exit 0
-$OPENSHIFT_RUNTIME_DIR/tomcat/bin/shutdown.sh
+set -x
+cd $OPENSHIFT_DATA_DIR/tomcat
+bin/shutdown.sh
