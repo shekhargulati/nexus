@@ -236,7 +236,7 @@ fi
 # Uncomment the following line to make the umask available when using the
 # org.apache.catalina.security.SecurityListener
 #JAVA_OPTS="$JAVA_OPTS -Dorg.apache.catalina.security.SecurityListener.UMASK=`umask`"
-
+JAVA_OPTS="$JAVA_OPTS -Djava.util.prefs.userRoot=$OPENSHIFT_DATA_DIR"
 # ----- Execute The Requested Command -----------------------------------------
 
 # Bugzilla 37848: only output this if we have a TTY
