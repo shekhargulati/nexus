@@ -7,5 +7,5 @@ set -x
 export PLEXUS_NEXUS_WORK=$OPENSHIFT_DATA_DIR
 export CATALINA_OPTS="$JAVA_OPTS -Djava.util.prefs.userRoot=$OPENSHIFT_DATA_DIR/prefs"
 cd $OPENSHIFT_DATA_DIR/tomcat
-sed -ig 's/OPENSHIFT_INTERNAL_IP/'$OPENSHIFT_DIY_IP'/' conf/server.xml
+sed -ig 's/OPENSHIFT_INTERNAL_IP/'$OPENSHIFT_DIY_IP'/g' conf/server.xml
 bin/startup.sh
