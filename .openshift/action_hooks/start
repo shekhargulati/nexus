@@ -1,11 +1,11 @@
 #!/bin/bash
 # The logic to start up your application should be put in this
 # script. The application will work only if it binds to
-# $OPENSHIFT_INTERNAL_IP:8080
+# $OPENSHIFT_DIY_IP:8080
 #nohup $OPENSHIFT_REPO_DIR/diy/testrubyserver.rb $OPENSHIFT_INTERNAL_IP $OPENSHIFT_REPO_DIR/diy > $OPENSHIFT_LOG_DIR/server.log 2>&1 &
 set -x
 export PLEXUS_NEXUS_WORK=$OPENSHIFT_DATA_DIR
 export CATALINA_OPTS="$JAVA_OPTS -Djava.util.prefs.userRoot=$OPENSHIFT_DATA_DIR/prefs"
 cd $OPENSHIFT_DATA_DIR/tomcat
-sed -ig 's/OPENSHIFT_INTERNAL_IP/'$OPENSHIFT_INTERNAL_IP'/g' conf/server.xml
+sed -ig 's/OPENSHIFT_INTERNAL_IP/'$OPENSHIFT_DIY_IP'/g' conf/server.xml
 bin/startup.sh

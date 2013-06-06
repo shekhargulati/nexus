@@ -27,4 +27,4 @@ That's it, you can now checkout your nexus at:
 
 The default nexus user is admin/admin123
 
-Note: You can get the latest nexus code from github at https://github.com/sonatype/nexus
+Note: You can get the latest nexus code from github at https://github.com/sonatype/nexus-oss
