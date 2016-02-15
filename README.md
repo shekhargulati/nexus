@@ -1,6 +1,8 @@
 Nexus on OpenShift
 ============================
 
+**I am not maintaining this repository anymore. You can find up-to-date version of nexus cartridge here [https://github.com/juliogonzalez/sonatype-nexus-openshift](https://github.com/juliogonzalez/sonatype-nexus-openshift)**
+
 This git repository will help you get up and running quickly with nexus running on tomcat on OpenShift.
 
 Create a DIY app on OpenShift
